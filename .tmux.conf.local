@@ -16,6 +16,8 @@
 #   - false (default)
 tmux_conf_preserve_stock_bindings=false
 
+bind-key / display-popup -w 90% -h 80% -T 'SCRATCH' -d "#{pane_current_path}"
+
 
 # -- session creation ----------------------------------------------------------
 
