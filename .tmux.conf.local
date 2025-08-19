@@ -393,8 +393,8 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
+set -g status-keys vi
+set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
 set -gu prefix2
@@ -411,6 +411,13 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 
 # move status line to top
 #set -g status-position top
+
+# copy-mode-vi key bindings
+bind-key -T copy-mode-vi C-u send-keys -X page-up
+bind-key -T copy-mode-vi C-d send-keys -X page-down
+bind-key -T copy-mode-vi H send-keys -X top-line
+bind-key -T copy-mode-vi M send-keys -X middle-line
+bind-key -T copy-mode-vi L send-keys -X bottom-line
 
 
 # -- tpm -----------------------------------------------------------------------
