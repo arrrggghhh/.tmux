@@ -396,6 +396,10 @@ tmux_conf_urlscan_options="--compact --dedupe"
 set -g status-keys vi
 set -g mode-keys vi
 
+# lock screen after 5 minutes of inactivity with cmatrix
+set -g lock-command 'cmatrix -s'
+set -g lock-after-time 300
+
 # replace C-b by C-a instead of using both prefixes
 set -gu prefix2
 unbind C-a
