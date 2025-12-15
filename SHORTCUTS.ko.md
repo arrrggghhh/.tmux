@@ -36,8 +36,6 @@
 ### 유틸리티
 
 - `<prefix> m`: 마우스 모드를 켜거나 끕니다.
-- `<prefix> U`: 가능하면 Urlscan(권장), 아니면 Urlview를 실행합니다.
-- `<prefix> F`: Facebook PathPicker를 실행합니다(가능한 경우).
 
 ### 복사 / 붙여넣기
 
