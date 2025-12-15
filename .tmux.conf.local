@@ -386,6 +386,13 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # this is the place to override or undo settings
 
+# pane index overlay time (prefix+q 포함)
+set -g display-panes-time 60000 #!important
+
+# prefix+q 대체: 오버레이 + 인덱스 입력으로 pane 이동(두 자리 이상 가능)
+unbind-key q
+bind-key q display-panes -bN -d 60000 \; command-prompt -p 'Pane index' 'select-pane -t :.%%' #!important
+
 # increase history size
 #set -g history-limit 10000
 
