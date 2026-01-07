@@ -419,6 +419,9 @@ unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 
+# reduce repeat timeout for prefix + hjkl pane navigation
+set -sg repeat-time 300
+
 # if you don't want Oh my tmux! to alter a binding or a setting, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
