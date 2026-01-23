@@ -1,0 +1,1 @@
+- .tmux.conf.local 만 수정 가능.
