@@ -428,6 +428,9 @@ set -sg repeat-time 300
 # display a message after toggling mouse support
 bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'
 
+# toggle status bar on/off (useful when vim statusline is enough)
+bind b set -g status #!important
+
 # move status line to top
 #set -g status-position top
 
